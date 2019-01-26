@@ -1,0 +1,3 @@
+String fourthMethod() {
+	return ("fourthMethod");
+}

@@ -1,0 +1,3 @@
+String secondMethod() {
+	return "secondMethod";
+}
