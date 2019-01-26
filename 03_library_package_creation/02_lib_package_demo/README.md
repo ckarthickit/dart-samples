@@ -10,3 +10,8 @@
   that's directly under `lib`</span>.
 
 
+## Running Tests 
+- Either run `pub run test` (or) `pub run test/test_all.dart` 
+- `test` is the test folder name . 
+
+
