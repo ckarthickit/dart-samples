@@ -25,3 +25,10 @@ root directory ------------- lib ----- file.dart
 ```
    - `pubspec.yaml` - 	Specification about the application (or) library and it's dependencies.  				
    - `lib` folder - Contains the library code. 
+
+##	Library Directives 
+
+1.	`export` directive 				 - Use to "explicitly" expose a dart file for public use.
+2.	`part` and `part of`  directives - allows to split a library into multiple dart files  (Avoid using part, create mini-libraries instead).<br/>
+										With part/part of you can split one library into several files and <span style="color:red">private members are accessible for all code within these files</span>
+3.  `library` directive 			 - To include any library-level documentation in the generated docs, you must specify the library directive.m

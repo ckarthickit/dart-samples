@@ -1,0 +1,34 @@
+#The name "should be" all lowercase, with underscores to separate words.
+name : app_package_demo 
+
+# A version number is three numbers separated by dots, like  0.2.43
+# Can also optionally have a build (+hotfix.oopsie) (or) pre-release (-alpha.12) suffix
+# If version spec not present , implicitly versioned as "0.0.0"
+version : 0.0.1
+
+description : A simple Applicatio Package Demo
+
+#author : Test Author 1  <testauthor1@test.com>
+
+authors: 
+- Test Author 1  <testauthor1@test.com>
+- Test Author 2 <testauthor2@test.com> 
+
+homepage: https://app_package_demo.dartlang.org
+
+documentation: https://docs.app_package_demo.com
+
+environment:
+  sdk: '>=2.0.0 <3.0.0'
+
+dependencies:
+  http: ^0.12.0
+
+dev_dependencies:
+  test: ^1.5.2
+
+#executables:
+#  useful-script:
+
+
+
