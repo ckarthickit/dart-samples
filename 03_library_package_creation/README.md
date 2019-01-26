@@ -16,7 +16,7 @@
 
 ## Basic structure of a Library package
 
-![alt text](packages_base_structure.png "Basic structure of a pacakge")
+![alt text](assets/packages_base_structure.png "Basic structure of a pacakge")
 ```
 root directory ------------- lib ----- file.dart
 					|
