@@ -109,7 +109,40 @@
     - <span style="color:orange">all functions (`that doesn't have explicit void return type`) return a value</span> .
     - if no return value specified , `return null;` is implicitly appended to function body.
 
-
+## Operators
+- For operators that work on two operands, <span style="color:orange">the leftmost operand determines which version of the operator is used</span>.
+- Type test operators : 
+  - `as` - used for `Typecast` (or) `Library Prefix`.
+  - `is` - true, if object has the specified type.
+  - `is!` - false, if the object has the specified type.
+- Assignement operators:
+  - `??=` - assigns ONLY IF assign-to variable is null.
+- Conditional Operators:
+  - `expr1 ?? expr2`
+    - If `expr1` is non-null, returns its value; otherwise, evaluates and returns the value of `expr2`.
+      - ```
+        var aName; 
+        var otherName; 
+        var playerName = aName ?? otherName;
+        ```
+- Cascade Operator ("...")
+  - allows us to make `sequence of operations on the same object`. 
+  - construct your `cascade on a function` that returns an actual object. (Useful on a builer class)
+    - ```
+      final addressBook = (AddressBookBuilder()
+      ..name = 'jenny'
+      ..email = 'jenny@example.com'
+      ..phone = (PhoneNumberBuilder()
+            ..number = '415-555-0100'
+            ..label = 'home')
+          .build())
+      .build();
+      ```
+  - <span style="color:red"> can’t construct a cascade on void.</span>
+  - strictly speaking `".."` is not an operator but part of `Dart Syntax`.
+- Member Access Opeartor
+  - `.` used to access members of a class
+  - `?.` checks if the instance is null , and acesses the property on the right hand.
 
 
 
