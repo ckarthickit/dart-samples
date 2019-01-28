@@ -5,7 +5,7 @@
   - All <span style="color:cyan">objects</span> inherit from `Object` class.
   - Even  `numbers`, `functions` and `null` are objects.
 
-## Dart is `stongly typed`
+## Dart is `strongly typed`
   - type annoataion is optional as `dart can infer types` at compile time.
     ```
     var number = 42;
@@ -77,13 +77,37 @@
     - To get the symbol for an identifier, `use a symbol literal`, which is just <span style=color:orange># followed by the identifier</span>.
     - symbol literals are `compile-time constants`.
 
-## Parameter types
-  - positional parameters
-  - named parameters
-
 ## Variable Assignment 
  - Const variables must be initialized with a constant value.
 
+## Functions
+ - are objects of type `Function`.
+ - `Type annotations` can be `ommitted`, in which case, the type will be `inferred as dynamic`.
+ - `Function Parameter Types`
+   - Required Parameters. - Are listed first 
+     - Positional parameters. ```(var variable1, var variable2)```
+     - Named parameters with `@required` annotation. ```({@required var variableName})```
+   - Optional Parameters.
+     - Types :
+       - Optional Positional parameters. ```([var variableName])```
+       - Optional Named parameters. ```({var variableName})```
+     - Optional parameters can have a `default value`. 
+       - ```([var variableName=<default_value>])```.   
+       - ```({var variableName=<default_value})```.
+ - `Anonymous Functions` (or) `lambda` (or) `Closures`
+   - Format:
+     ```
+     ([[Type] param1[, …]]) {
+       codeBlock;
+     }; 
+     ```
+  - Lexical Scope 
+    - Innermost function can access outer scope variables
+  - Lexical Closure:
+    - <span style="color:orange">A closure is a function object that has access to variables in its lexical scope, `even when the function   is used outside of its original scope`.</span>
+  - `Return Value`:
+    - <span style="color:orange">all functions (`that doesn't have explicit void return type`) return a value</span> .
+    - if no return value specified , `return null;` is implicitly appended to function body.
 
 
 
