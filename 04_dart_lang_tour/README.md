@@ -144,6 +144,39 @@
   - `.` used to access members of a class
   - `?.` checks if the instance is null , and acesses the property on the right hand.
 
+## Control Flow Statements
+  - for loop 
+    - `traditional` for loop that keeps track of `index`.
+    - `Iterable` objects an use `forEach()` method.
+    - `Iterable` objects can use `for-in` loop if `index` is not needed. 
+  - swith - case 
+    - Switch statements in Dart compare `integer`, `string`, or `compile-time constants` using `"=="`.
+    - Compared objects must all be instances of `same class` (`and NOT of any of it's subtypes`)
+    - Compared objects - Class `MUST NOT override "=="`.
+    - `Enumerated Types` work well with switch-case.
+    - Specials : 
+      - `non-empty` case clause without break is an error.
+      - `empty` case clause without break is treated as `fall-through`.
+      - `explicit fall-through` can be achieved with `continue <label>;`
+        - Eg: 
+          ```
+          var command = 'CLOSED';
+          switch (command) {
+            case 'CLOSED':
+              executeClosed();
+              continue nowClosed;
+              // Continues executing at the nowClosed label.
+
+            nowClosed:
+            case 'NOW_CLOSED':
+              // Runs for both CLOSED and NOW_CLOSED.
+              executeNowClosed();
+              break;
+          }
+          ```
+  - assert s
+    - `assert` statement distrupts normal executing if an expression evaluates to `false`. 
+
 
 
 
