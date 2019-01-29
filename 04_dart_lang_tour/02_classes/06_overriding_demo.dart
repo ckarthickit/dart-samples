@@ -77,7 +77,7 @@ void implementHashCodePropertyAndEqualOperator() {
   Point p2 = new Point(3, 4);
   Point p3 = new Point(1, 2);
 
-  print('p1 = $p1');
+  print('p1 = ${p1}');
   print('p2 = $p2');
   print('p3 = $p3');
   print('p1==p2? ${p1 == p2}');

@@ -83,7 +83,19 @@
     - `extend` exactly one class.
     - `implements` many abstract classes. 
     - mix `with` many `mixin` classes.
-
   - Enums
     - `can't explicitly instantiate` an enum.
     - `can't subclass , mixin (or) implement` an enum.
+    - can be used in `switch-case`.
+
+  - Mixins
+    - Adds features to a class.
+    - `re-use class's code in multiple class hierarchies`.
+    - Mixin Classes
+      - `MUST NOT HAVE constructor`.
+      - `MUST ONLY EXTEND Object` class.
+      - as per the last test, if `2 mixins' have same method`, the one that is `specified last in the with-clause` recieves the method call. :/
+      - classes use `mixin` class by specifying `with` clause.
+      - `mixin` with `on` clause restrict which `super-classes they can mix with`.
+        - Enables `mixin` to invoke methods that it doesn't implement but might be available in th super-class specified using `on` clause.
+        - the super-class that is spcified using `on` class , must have the `unnamed, no-arg constructor` in it.
