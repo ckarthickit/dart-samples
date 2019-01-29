@@ -177,6 +177,43 @@
   - assert s
     - `assert` statement distrupts normal executing if an expression evaluates to `false`. 
 
+## Exceptions 
+  - Types of Abnormalities .
+    - Exception (`abstract class Exception`) - failure that can be addressed `programatically`
+      - can be caught and mitigated.
+    - Error  - failure that should have been avoided by the programmer
+      - caller should not expect (or) catch errors.
+      - terminating the program is the safest response.
+      - has a `stackTrace` property
+  - All exceptions are `unchecked`.
+  - Any `non-null` object can be thrown - (`Throwing need not mean abnormality`).
+    - Eg., 
+      ```
+        throw 'Out of llamas!';
+      ```
+  - Catch Clause 
+    - Eg: 
+      ```
+      try {
+        breedMoreLlamas();
+      } on OutOfLlamasException { //catches the Exception, but DOES NOT capture the exception object.
+        // A specific exception
+        buyMoreLlamas();
+      } on Exception catch (e) {
+        // Anything else that is an exception
+        print('Unknown exception: $e');
+      } catch (e, s) { //e is the exception; s is the stacktrace
+        // No specified type, handles all
+        print('Something really unknown: $e');
+      }
+      ```
+    - Must be arranged in order from more precise (sub-class) to less-precise catch clause.
+    - use `rethrow` keyword `"inside a catch block"` to propogate a `partially - handled` exception.
+  - finally
+    - finally clause `runs AFTER matching catch clause`.
+    - if no catch clause matches the exception , it is propogated `after the finally clause runs`. 
+
+
 
 
 
