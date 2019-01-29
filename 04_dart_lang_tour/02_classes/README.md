@@ -99,3 +99,7 @@
       - `mixin` with `on` clause restrict which `super-classes they can mix with`.
         - Enables `mixin` to invoke methods that it doesn't implement but might be available in th super-class specified using `on` clause.
         - the super-class that is spcified using `on` class , must have the `unnamed, no-arg constructor` in it.
+  - static methods and classes 
+    - `static variable are not initialized until they are used`. 
+    - `static methods` *DO NOT* have access to `this`.
+      - Prefer Top-Level functions, instead of static methods for common (or) widely used utilities and functionality.

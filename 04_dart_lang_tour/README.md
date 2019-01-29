@@ -223,6 +223,49 @@
     - `implements` many pure abstract classes. 
     - mix `with` many `mixin` classes.
 
+## Generics
+  - Required for type-safety.
+  - Reduces Code duplication.
+  - Can be used with Literals as well
+    - Eg: 
+      ```
+        var names = <String>['Seth','Kathy', 'Lars`];
+        var pages = <String,String> {
+          'index.html': 'Homepage',
+          'robots.txt': 'Hints for web robots',
+          'humans.txt': 'We are people, not machines'
+        };
+      ```
+  - Can be used with constructors (`both un-named and named`)
+    - Eg: 
+      ```
+        var names = List<String>();
+        names.addAll(['Seth', 'Kathy', 'Lars']);
+        var nameSet = Set<String>.from(names);
+          
+        //The following map has integer keys with values of type View.
+        var views = Map<int, View>();
+      ```
+  - `Generic type information are carried around at runtime`. (Unlike JAVA)
+    - Eg: 
+      ```
+        var names = List<String>();
+        names.addAll(['Seth', 'Kathy', 'Lars']);
+        print(names is List<String>); // true
+      ```
+  - Generics can be restricted 
+    - Eg:  `<T extends Stream>`
+  - Generic Methods are supported
+    - Eg:
+      ```
+      T first<T>(List<T> ts) {
+        // Do some initial work or error checking, then...
+        T tmp = ts[0];
+        // Do some additional checking or processing...
+        return tmp;
+      }
+      ```
+
 
 
 
