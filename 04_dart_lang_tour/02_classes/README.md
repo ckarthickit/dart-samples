@@ -75,8 +75,15 @@
         Create `class A` that supports `class B`'s API `without inheriting class B's implementation`<br/>
       Solution : <br/>
         `class A` should implement `class B`  (Probably useful while writing mock implementations ?)
-        
+  - Overriding
+    - `operator` overriding is possible in DART.
+    - It's always recommended to `override` the `hashCode` - getter property, if `==` - operator is overridden.
+
   - Inheritance & Reuse
     - `extend` exactly one class.
     - `implements` many abstract classes. 
     - mix `with` many `mixin` classes.
+
+  - Enums
+    - `can't explicitly instantiate` an enum.
+    - `can't subclass , mixin (or) implement` an enum.
