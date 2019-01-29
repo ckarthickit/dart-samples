@@ -48,6 +48,11 @@
           2. an instance of `sub-type`
       - have `no-access to this`.
       - needs `explicit return` statement . So it's like a method but with the same name as class.
+  - Instance Properties , Instace Methods , Getters & Setters
+    - instance methods can access `instance variables/properties` and `this`.
+    - Getters and Setters are `special methods` that  provide access to Object's properties.
+      - apart from declaring instance variables (that are otherwise known as properties), we can
+        create additional properties by implementing appropriate `get`ter and `set`ter methods.
   - Inheritance & Reuse
     - `extend` exactly one class.
     - `implements` many pure abstract classes. 
