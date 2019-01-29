@@ -50,10 +50,33 @@
       - needs `explicit return` statement . So it's like a method but with the same name as class.
   - Instance Properties , Instace Methods , Getters & Setters
     - instance methods can access `instance variables/properties` and `this`.
-    - Getters and Setters are `special methods` that  provide access to Object's properties.
+    - Getters and Setters are `special methods` that  provide access to Object's `properties`.
       - apart from declaring instance variables (that are otherwise known as properties), we can
         create additional properties by implementing appropriate `get`ter and `set`ter methods.
+  - *abstract* methods / classes
+    - 2 types
+      1. instance methods
+      2. getter / setter (property access)methods 
+    - exist only in `abstract` classes
+    - Eg: 
+      ```
+        abstract class Doer {
+          num get id;  //abstract getter
+          void set id(num id); //abstract setter
+          void doSomething(); //abstract instance methods
+        }
+      ```
+    - `abstract classes` *CANNOT BE INSTANTIATED*.
+      - Define a `factory constructor` to make abstract class appear to be instantiable.
+  - *Implicit interfaces*
+    - Every class `implicitly DEFINES (not implements)` an interface containing all the `instance members`
+      of it, and any interfaces it implements
+    - Requirement : <br/>
+        Create `class A` that supports `class B`'s API `without inheriting class B's implementation`<br/>
+      Solution : <br/>
+        `class A` should implement `class B`  (Probably useful while writing mock implementations ?)
+        
   - Inheritance & Reuse
     - `extend` exactly one class.
-    - `implements` many pure abstract classes. 
+    - `implements` many abstract classes. 
     - mix `with` many `mixin` classes.
