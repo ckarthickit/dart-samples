@@ -108,6 +108,7 @@
   - `Return Value`:
     - <span style="color:orange">all functions (`that doesn't have explicit void return type`) return a value</span> .
     - if no return value specified , `return null;` is implicitly appended to function body.
+  - `Functions cannot be overloaded` (instead) we can use `named parameters / optional positioned parameters`.
 
 ## Operators
 - For operators that work on two operands, <span style="color:orange">the leftmost operand determines which version of the operator is used</span>.
@@ -212,6 +213,15 @@
   - finally
     - finally clause `runs AFTER matching catch clause`.
     - if no catch clause matches the exception , it is propogated `after the finally clause runs`. 
+
+## Classes
+  - Constructors 
+    - names can either be `ClassName` (or) `ClassName.identifier` . 
+    - `new` keyword is `optional` as of Dart 2.
+  - Inheritance & Reuse
+    - `extend` exactly one class.
+    - `implements` many pure abstract classes. 
+    - mix `with` many `mixin` classes.
 
 
 
