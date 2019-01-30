@@ -23,6 +23,7 @@ main() {
   }catch(e) {
     print('exception: ' + e.runtimeType.toString());
   }
+  callback(1,2,3);
 }
 
 populateInt() {
@@ -42,4 +43,8 @@ void stringBufferTest() {
   ..write("obj1")
   ..writeAll(["asda", "asas"])
   ..write("obj2");
+}
+
+void callback(int aNumber, _, __) {
+  print('I accept a first arguement number and ignore second(_) and third(__)');
 }

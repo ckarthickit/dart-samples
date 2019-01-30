@@ -20,6 +20,9 @@ void main(){
   /*********************/
   Future<void> func2Future = function2();
   print('func2Future is $func2Future');
+  func2Future.then((_){
+    print("func2Future doesn't have a value");
+  });
   /*********************/
   Future<String> func3Future = function3();
   print('func3Future is $func3Future');

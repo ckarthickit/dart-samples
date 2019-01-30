@@ -109,6 +109,16 @@
     - <span style="color:orange">all functions (`that doesn't have explicit void return type`) return a value</span> .
     - if no return value specified , `return null;` is implicitly appended to function body.
   - `Functions cannot be overloaded` (instead) we can use `named parameters / optional positioned parameters`.
+  - `Callback Functions`
+    - As `_` is a valid identifier , it's often used to ignore an extra param that is not needed 
+      in callback
+    - Eg.,
+      ```
+      void callback(int aNumber, _, __) {
+        print('I accept a first arguement number and ignore second(_) and third(__)');
+      }
+      callback(1,2,3); //Here arguement 2 and 3 are name using underscores as they aren't needed
+      ```
 
 ## Operators
 - For operators that work on two operands, <span style="color:orange">the leftmost operand determines which version of the operator is used</span>.
