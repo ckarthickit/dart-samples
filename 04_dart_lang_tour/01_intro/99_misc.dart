@@ -34,3 +34,12 @@ populateString() {
     return 'Test';
   }
 }
+
+void stringBufferTest() {
+  StringBuffer buffer = new StringBuffer();
+  buffer 
+  ..write("obj")
+  ..write("obj1")
+  ..writeAll(["asda", "asas"])
+  ..write("obj2");
+}
