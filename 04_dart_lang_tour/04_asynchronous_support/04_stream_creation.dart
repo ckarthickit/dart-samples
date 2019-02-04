@@ -5,7 +5,7 @@ void main() async{
     print('demoStream: $value');
   }
   print('================');
-  await for(var value in demoStreamFromAsycStart()){
+  await for(var value in demoStreamFromAsycStar()){
      print('demoStreamFromAsycStart: $value');
   }
   print('================');
@@ -27,7 +27,7 @@ void main() async{
 Stream<int> getDemoStream() {
   return  Stream<int>.fromIterable([1,2,3,4,5,6,7,'a'.runes.single,9,10]);
 }
-Stream<int> demoStreamFromAsycStart() async*{
+Stream<int> demoStreamFromAsycStar() async*{
   yield 1;
   yield 2;
   yield 3;
