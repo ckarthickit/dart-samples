@@ -24,6 +24,26 @@
     - Automcatically UnWraps the value returned by future on return (if any).
     - CAN be done ONLY inside `async` functions . 
 
+## Streams 
+  - Three ways of creating streams 
+    - `Transforming` existing Streams.
+    - Creating a stream from the scratch using `async*` and `yield`ing some values 
+      - Eg., We can yield values delivered by some Future objects 
+      ```
+      Stream<int> timedCounter(Duration interval, [int maxCount]) async* {
+        int i = 0;
+        while (true) {
+          await Future.delayed(interval);
+          yield i++;
+          if (i == maxCount) break;
+        }
+      }
+      ```
+    - Creating a stream using `StreamController`.
+  - `await for` can be used only on Streams
+  - `yield` can be used only inside `async*` functions
+  - `async*` functions *MUST* return a Stream object
+
 
 
 
