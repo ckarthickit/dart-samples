@@ -44,6 +44,8 @@
       which could lead to `memory-leak` if stream never gets a subscriber.
   - `Stream`s *SHOULD* wait for subscribers before starting their work
   - `await for` can be used only on Streams
+    - If a stream has `error events`, when reading the stream using await for,
+     the error is thrown by the loop statement. `This ends the loop, as well`. 
   - `yield` can be used only inside `async*` functions
   - `async*` functions *MUST* return a Stream object
 
