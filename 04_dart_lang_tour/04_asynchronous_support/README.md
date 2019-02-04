@@ -40,6 +40,9 @@
       }
       ```
     - Creating a stream using `StreamController`.
+      - When a stream has no-subscriber , StreamController buffers event,
+      which could lead to `memory-leak` if stream never gets a subscriber.
+  - `Stream`s *SHOULD* wait for subscribers before starting their work
   - `await for` can be used only on Streams
   - `yield` can be used only inside `async*` functions
   - `async*` functions *MUST* return a Stream object
